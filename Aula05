@@ -1,0 +1,27 @@
+namespace Aula05;
+
+public class Program
+{
+public static void Main()
+    {
+        Console.WriteLine("-----------------------------------");
+        Console.Write("Numero 1: ");
+        int n1 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Numero 2: ");
+        int n2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("-----------------------------------");
+
+        int sum = n1 + n2;
+        int sub = n1 - n2;
+        int mult = n1 * n2;
+        int div = n2 / n1;
+        int rest = n2 % n1;
+
+        Console.WriteLine($"O valor da soma é: {sum}");
+        Console.WriteLine($"O valor da subtração é: {sub}");
+        Console.WriteLine($"O valor da multiplicação é: {mult}");
+        Console.WriteLine($"O valor da divisão é: {div}");
+        Console.WriteLine($"O resto da divisão é: {rest}");
+    }
+}

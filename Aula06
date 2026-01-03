@@ -1,0 +1,45 @@
+using System.Dynamic;
+
+namespace Aula06;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("Verificação de Par/Impar");
+        Console.WriteLine("----------------------");
+        Console.Write("Digite um numero: ");
+        int n1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite outro numero: ");
+        int n2 = Convert.ToInt32(Console.ReadLine());
+
+        if (n1 >= n2)
+        {
+            int rest = n1 % n2;
+            Console.WriteLine($"O resto da divisão entre os numeros: {n1} e {n2} = {rest}");
+        }
+        else
+        {
+            int rest = n2 % n1;
+            Console.WriteLine($"O resto da divisão entre os numeros: {n2} e {n1} = {rest}");
+        }
+
+        if(n1 % 2 == 0)
+        {
+            Console.WriteLine($"O numero {n1} é PAR");
+        } 
+        else
+        {
+            Console.WriteLine($"O numero {n1} é IMPAR");
+        }
+
+        if (n2 % 2 == 0)
+        {
+            Console.WriteLine($"O numero {n2} é PAR");
+        }
+        else
+        {
+            Console.WriteLine($"O numero {n2} é IMPAR");
+        }
+    }
+}

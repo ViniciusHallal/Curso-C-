@@ -1,0 +1,39 @@
+namespace Aula18;
+
+using System.IO;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("------- Arquivos/Files -------");
+
+        ////1. Create a file
+        //string content = "Hello World";
+        //File.WriteAllText("file.txt", content);
+
+        //Console.WriteLine("Arquivo criado com sucesso");
+
+        ////2. Create file in specific local
+        //string path1 = @"C:\Users\Vinic\Downloads\Curso C#\Aula18\fileName.txt";
+        //File.WriteAllText(path1, content);
+
+        ////3. Create a Word file
+        //string path2 = @"C:\Users\Vinic\Downloads\Curso C#\Aula18\fileWord.docx";
+        //File.WriteAllText(path2, content);
+
+        ////4. Insert text in a file
+        //string additionalcontent = " | Curso de C# e .NET";
+        //string path = @"C:\Users\Vinic\Downloads\Curso C#\Aula18\fileadicional.docx";
+        //File.WriteAllText(path, content);
+        //File.AppendAllText(path, additionalcontent);
+
+        ////5. Read file
+        string path = @"C:\Users\Vinic\Downloads\Curso C#\Aula18\fileadicional.docx";
+
+        string filecontent = File.ReadAllText(path);
+        Console.WriteLine($"Conteudo do arquivo: {filecontent}");
+
+
+    }
+}

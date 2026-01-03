@@ -1,0 +1,46 @@
+namespace Aula09;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("------- Operadores Lógicos -------");
+
+        bool isLogged = true;
+        bool adminAcess = false;
+
+        Console.WriteLine("\nInformações do Usuário");
+        Console.WriteLine($"\nUsuário Logado: {isLogged}");
+        Console.WriteLine($"Acesso ao painel de Administrador: {adminAcess}");
+
+        Console.WriteLine("\n----------------------------------");
+        Console.WriteLine("\nPermissões");
+
+        if (isLogged || adminAcess)// Operador (||) - OU
+        {
+            Console.WriteLine($"\nAcesso ao sistema concedido");
+        }
+        else
+        {
+            Console.WriteLine($"\nAcesso ao sistema negado");
+        }
+
+        if (isLogged && adminAcess)// Operador (&&) - E
+        {
+            Console.WriteLine($"Acesso ao painel de ADM concedido");
+        }
+        else
+        {
+            Console.WriteLine($"Acesso ao painel de ADM negado");
+        }
+
+        if (!isLogged)// Operador (!) - Negação
+        {
+            Console.WriteLine($"Usuário Logado");
+        }
+        else
+        {
+            Console.WriteLine($"Usuário Deslogado");
+        }
+    }
+}

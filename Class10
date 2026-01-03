@@ -1,0 +1,68 @@
+namespace Aula10;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("------- Calculadora Simples -------");
+
+        Console.Write("\nDigite o 1º número: ");
+        Double n1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Digite o 2º número: ");
+        Double n2 = Convert.ToDouble(Console.ReadLine());
+        int operador;
+
+        do
+        {
+            Console.Clear();
+
+            Console.WriteLine("Tipo de Operação\n");
+            Console.WriteLine("1 - Soma (+)");
+            Console.WriteLine("2 - Subtração (-) ");
+            Console.WriteLine("3 - Multiplicação (*) ");
+            Console.WriteLine("4 - Divisão (/)");
+            Console.WriteLine("0 - Sair");
+            Console.Write("\nSelecione a operação: ");
+            operador = Convert.ToInt32(Console.ReadLine());
+
+
+
+            if (operador == 1)
+            {
+                Console.WriteLine($"{n1} + {n2} = {n1 + n2}");
+            }
+            else if (operador == 2)
+            {
+                Console.WriteLine($"{n1} - {n2} = {n1 - n2}");
+            }
+            else if (operador == 3)
+            {
+                Console.WriteLine($"{n1} * {n2} = {n1 * n2}");
+            }
+            else if (operador == 4)
+            {
+                if (n2 != 0)
+                {
+                    Console.WriteLine($"{n1} / {n2} = {n1 / n2}");
+                }
+                else
+                {
+                    Console.WriteLine("Erro! Impossivel dividir um número por 0");
+                }
+            } else if(operador == 0)
+            {
+                Console.WriteLine("\nSaindo do programa ...");               
+            } else
+            {
+                Console.WriteLine("Opção selecionada inexistente!");
+            }
+
+            if (operador != 0)
+            {
+                Console.Write("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            }
+
+        } while (operador != 0);
+    }
+}

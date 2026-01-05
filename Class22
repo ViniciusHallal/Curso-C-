@@ -1,0 +1,57 @@
+namespace Aula22;
+
+public class Program
+{
+    public static void Main()
+    {
+        //1. Instância da Classe Cake - 'New'
+        var CakeStrawberry = new Cake();
+
+        //2. Setar as informações do bolo de morango
+        CakeStrawberry.Id = 01;
+        CakeStrawberry.Name = "Bolo de Morango Recheado";
+        CakeStrawberry.Description = "Um delicioso bolo de morango recheado. Contém lactose.";
+        CakeStrawberry.Value = 30.00;
+        CakeStrawberry.IsFilling = true;
+
+        Console.WriteLine("----------------------  PADARIA NOVO SONHO --------------------------");
+
+        //3. Mostrar ao usúario
+        Console.WriteLine($"{CakeStrawberry.Name} - ID: {CakeStrawberry.Id}");
+        Console.WriteLine($"Descrição: {CakeStrawberry.Description}");
+        Console.WriteLine($"Valor: R$ {CakeStrawberry.Value:f2}");
+        Console.WriteLine($"Recheado: {CakeStrawberry.IsFilling}");
+
+        Console.WriteLine("\n---------------------------------------------------------------------\n");
+
+        //4. Instância de Bolo de Chocolate
+        var CakeChocolate = new Cake();
+
+        CakeChocolate.Id = 02;
+        CakeChocolate.Name = "Bolo de Chocolate";
+        CakeChocolate.Description = "Um delicioso bolo de chocolate. Contém lactose.";
+        CakeChocolate.Value = 35.00;
+        CakeChocolate.IsFilling = false;
+
+        Console.WriteLine($"{CakeChocolate.Name} - ID: {CakeChocolate.Id}");
+        Console.WriteLine($"Descrição: {CakeChocolate.Description}");
+        Console.WriteLine($"Valor: R$ {CakeChocolate.Value:f2}");
+        Console.WriteLine($"Recheado: {CakeChocolate.IsFilling}");
+
+
+        //5. Lista de Bolos
+        List<Cake> cakelist = new List<Cake>();
+        cakelist.Add(CakeStrawberry);
+        cakelist.Add(CakeChocolate);
+
+        Console.WriteLine("\n-------------------------- LISTA DE BOLOS ---------------------------\n");
+        foreach (Cake cake in cakelist)
+        {
+            Console.WriteLine($"{cake.Name} - ID: {cake.Id}");
+            Console.WriteLine($"Descrição: {cake.Description}");
+            Console.WriteLine($"Valor: R$ {cake.Value:f2}");
+            Console.WriteLine($"Recheado: {cake.IsFilling}");
+            Console.WriteLine("\n---------------------------------------------------------------------\n");
+        }
+    }
+}
